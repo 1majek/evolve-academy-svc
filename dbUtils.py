@@ -3,11 +3,6 @@ from fastapi import Depends, HTTPException, Query
 from typing import Annotated
 import os
 
-# docker run --name evolve-postgres -p 5432:5432 -e POSTGRES_PASSWORD=majek -d postgres
-# sqlite_file_name = "database.db"
-# sqlite_url = f"sqlite:///{sqlite_file_name}"
-# connect_args = {"check_same_thread": False}
-
 db_password = os.getenv("DB_PASSWORD")
 db_host = os.getenv("DB_HOST")
 db_port = os.getenv("DB_PORT")
